@@ -20,6 +20,8 @@ const createDeleteButton = (params) => {
     return button.element;
 };
 
+
+
 /**
  * Add new row
  */

@@ -68,5 +68,5 @@ export {
     Counter,
     createElement,
     cardStorage,
-    LocalStorageUtil
+    LocalStorageUtil,
 }

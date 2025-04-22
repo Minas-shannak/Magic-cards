@@ -19,6 +19,7 @@ const CARD_TEXT = {
 
 const APP_PAGES = [
     { text: 'Home', href: 'home' },
+    { text: 'Ag Grid', href: 'aggrid' },
     { text: 'About Us', href: 'about-us' },
     { text: 'Profile', href: 'profile' },
   ];

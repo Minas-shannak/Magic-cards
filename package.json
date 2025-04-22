@@ -1,0 +1,8 @@
+{
+  "name": "task2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "mohammad@quiqflow.com",
+  "license": "MIT",
+  "private": true
+}

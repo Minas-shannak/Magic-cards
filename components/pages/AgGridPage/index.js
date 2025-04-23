@@ -1,6 +1,7 @@
 import { AgDataGrid } from '../../organisms/AgDataGrid/index.js';
 import { createElement } from '../../../utils/index.js';
-import { createAddCardForm } from '../../../utils/AgGridManage/index.js';
+import { AddCardForm } from '../../../utils/index.js';
+
 
 export class AgGridPage {
   constructor() {
@@ -18,9 +19,9 @@ export class AgGridPage {
       className: 'page-title',
     });
 
-    const addCardForm = createAddCardForm((newCard) => {
-        this.grid.addCard(newCard);
-      });
+    const addCardForm = new AddCardForm((newCard) => {
+      this.grid.addCard(newCard);
+    }).element;
 
     existingPageContent.append(title, addCardForm, this.grid.gridWrapper);
     return existingPageContent;

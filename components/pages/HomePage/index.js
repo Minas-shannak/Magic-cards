@@ -19,10 +19,7 @@ export class HomePage {
 
         const counterBtnContainer = createElement('div', { className: 'counter-btn-container' });
 
-        const selectAllButton = new Button(
-            CARD_TEXT.SELECT_ALL, 
-            () => this.cardList.selectAll()
-        );
+        const selectAllButton = new Button(CARD_TEXT.SELECT_ALL, () => this.cardList.selectAll());
         const deselectAllButton = new Button(
             CARD_TEXT.DESELECT_ALL,
             () => this.handleDeselectAll(),

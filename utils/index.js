@@ -1,5 +1,3 @@
-import { Button } from '../../components/atoms/Button/index.js';
-
 /**
  * Utility function to create HTML elements dynamically
  */
@@ -33,6 +31,7 @@ class LocalStorageUtil {
 }
 
 const cardStorage = new LocalStorageUtil('selectedCards');
+const KanbanStorage = new LocalStorageUtil('selectedCards');
 
 /**
  * Counter Class (Handles counting selected items)
@@ -66,82 +65,10 @@ class Counter {
     }
 }
 
-/**
- * Class for creating a delete button for ag-Grid
- */
-class DeleteButton {
-    constructor(params) {
-        this.params = params;
-        this.button = new Button('Delete', this.handleClick.bind(this), 'secondary');
-    }
-
-    handleClick() {
-        const rowData = this.params.node.data;
-        const grid = this.params.context.agDataGrid;
-
-        if (this.params.api) {
-            this.params.api.applyTransaction({ remove: [rowData] });
-            grid.rowData = grid.rowData.filter(card => card !== rowData);
-        }
-    }
-
-    get element() {
-        return this.button.element;
-    }
-}
-
-
-/**
- * Class for creating a form to add new cards
- */
-class AddCardForm {
-    constructor(addCardCallback) {
-        this.addCardCallback = addCardCallback;
-        this.fields = ['name', 'manaCost', 'power', 'toughness', 'type', 'rarity', 'setName', 'artist'];
-        this.inputs = {};
-        this.form = this.createForm();
-    }
-
-    createForm() {
-        const form = createElement('form', { className: 'card-form' });
-
-        this.fields.forEach(field => {
-            const label = createElement('label', {}, `${field}: `);
-            const input = createElement('input', { name: field, required: true });
-            label.appendChild(input);
-            form.appendChild(label);
-            this.inputs[field] = input;
-        });
-
-        const submitBtn = new Button('Add Card', this.handleSubmit.bind(this));
-        form.appendChild(submitBtn.element);
-
-        return form;
-    }
-
-    handleSubmit(e) {
-        e.preventDefault();
-        const newCard = {};
-
-        this.fields.forEach(field => {
-            newCard[field] = this.inputs[field].value;
-        });
-
-        this.addCardCallback(newCard);
-        this.form.reset();
-    }
-
-    get element() {
-        return this.form;
-    }
-}
-
-
 export {
     Counter,
     createElement,
     cardStorage,
     LocalStorageUtil,
-    DeleteButton,
-    AddCardForm,
+    KanbanStorage
 }

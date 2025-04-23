@@ -6,6 +6,7 @@ const FALLBACK_IMAGE = "http://gatherer.wizards.com/Handlers/Image.ashx?multiver
 const BURGER_ICON_LINES = 3;
 const DEFAULT_CARD_FETCH_SIZE = 70;
 const INITIAL_COUNTER = 0;
+const KANBAN_CARD = 4;
 
 const CARD_TEXT = {
     DE_SELECT: 'Deselect',
@@ -19,7 +20,7 @@ const CARD_TEXT = {
 
 const APP_PAGES = [
     { text: 'Home', href: 'home' },
-    { text: 'Ag Grid', href: 'aggrid' },
+    { text: 'Kanban View', href: 'kanban' },
     { text: 'About Us', href: 'about-us' },
     { text: 'Profile', href: 'profile' },
   ];
@@ -31,4 +32,5 @@ export {
     DEFAULT_CARD_FETCH_SIZE,
     FALLBACK_IMAGE,
     INITIAL_COUNTER,
+    KANBAN_CARD,
 }

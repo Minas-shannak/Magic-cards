@@ -1,0 +1,59 @@
+    .kanban-view, .grid-view {
+    display: none;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+  }
+  
+  .kanban-view {
+    display: flex;
+  }
+  
+  .column {
+    flex: 1;
+    margin: 0 10px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    min-height: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .column h3 {
+    text-align: center;
+  }
+  
+  .KanbanCard {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: grab;
+  }
+  
+  .KanbanCard.dragging {
+    opacity: 0.5;
+  }
+  
+  .grid-view .KanbanCard {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

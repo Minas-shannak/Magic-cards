@@ -1,6 +1,6 @@
 console.log('Kanban Page');
 import { createElement } from '../../../utils/index.js';
-import { KanbanView } from '../../organisms/KanbanView/index.js';
+import { KanbanView } from '../../organisms/kanbanView/index.js';
 import { KANBAN_CARD } from '../../../constants/index.js';
 
 export class KanbanPage {

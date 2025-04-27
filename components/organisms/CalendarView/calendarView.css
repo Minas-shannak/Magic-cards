@@ -16,8 +16,8 @@
   }
   
   .calendar-header button {
-    background-color: #3396ff;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-white);
     border: none;
     padding: 5px 10px;
     cursor: pointer;
@@ -37,24 +37,24 @@
   .day-name, .day {
     padding: 10px;
     margin: 5px;
-    border: 1px solid #eee;
+    border: 1px solid var(--background-light);
     min-height: 70px;
     position: relative;
-    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--box-shadow-card);
   }
   
   .day-name {
     font-weight: bold;
-    background-color: #f0f0f0;
+    background-color: var(--background-light);
   }
   
   .today {
-    background-color: #3396ff;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-white);
   }
   
   .task {
-    background-color: #ffc107;
+    background-color: var(--color-orange);
     padding: 5px;
     margin-top: 5px;
     border-radius: 5px;

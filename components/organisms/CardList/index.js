@@ -22,7 +22,6 @@ export class CardList {
     createFilterControls() {
         const filterWrapper = createElement('div', { className: 'filter-controls' });
         
-        // حقل البحث بالاسم
         const nameInput = new Input({
             placeholder: 'Search by name...',
             type: 'text',
@@ -30,7 +29,6 @@ export class CardList {
             onChange: () => this.applyFilters()
         });
         
-        // فلتر النوع
         const typeSelect = new Select({
             id: 'type-filter',
             options: [
@@ -45,7 +43,6 @@ export class CardList {
             onChange: () => this.applyFilters()
         });
         
-        // فلتر الندرة
         const raritySelect = new Select({
             id: 'rarity-filter',
             options: [
@@ -58,7 +55,6 @@ export class CardList {
             onChange: () => this.applyFilters()
         });
         
-        // زر إعادة الضبط
         const resetButton = new Button('Reset Filters', () => this.resetFilters(), 'secondary');
         
         filterWrapper.append(
@@ -142,7 +138,6 @@ export class CardList {
             }
         });
         
-        // إذا كانت الفلترة نشطة، احذف فقط البطاقات المرئية
         if (this.filteredCards.length > 0 && this.filteredCards.length < this.cards.length) {
             const selectedIds = cardStorage.load();
             const filteredIds = this.filteredCards.map(card => card.id);

@@ -31,7 +31,10 @@ class LocalStorageUtil {
 }
 
 const cardStorage = new LocalStorageUtil('selectedCards');
+const tableStorage = new LocalStorageUtil('tableData');
+const taskStorage = new LocalStorageUtil('calendarTasks');
 const KanbanStorage = new LocalStorageUtil('selectedtask');
+
 
 /**
  * Counter Class (Handles counting selected items)
@@ -70,5 +73,7 @@ export {
     createElement,
     cardStorage,
     LocalStorageUtil,
-    KanbanStorage,
+    tableStorage,
+    taskStorage,
+    KanbanStorage
 }

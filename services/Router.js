@@ -3,11 +3,9 @@ import { HomePage } from "../components/pages/HomePage/index.js";
 import { ProfilePage } from "../components/pages/ProfilePage/index.js";
 import { AboutUsPage } from "../components/pages/AboutUsPage/index.js";
 import { createElement } from "../utils/index.js";
-import { KanbanPage } from "../components/pages/KanbanPage/index.js";
 
 const routes = {
   home: HomePage,
-  kanban: KanbanPage,
   profile: ProfilePage,
   'about-us': AboutUsPage,
 };

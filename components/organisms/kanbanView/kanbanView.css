@@ -1,0 +1,51 @@
+.kanban-view {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  width: 100%;
+  overflow-x: auto;
+  padding: 10px 0;
+  justify-content: center;
+}
+
+.column {
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: var(--box-shadow-card);
+  min-height: 250px;
+}
+
+.column h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+}
+
+.KanbanCard {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  cursor: grab;
+  transition: background-color 0.4s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.KanbanCard.dragging {
+  opacity: 0.7;
+  /* transform: rotate(2deg); */
+}
+
+.KanbanCard:hover {
+  background-color: var(--color-light-red);
+}
+
+.tab-content > * {
+  width: 100%;
+}

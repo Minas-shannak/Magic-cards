@@ -1,0 +1,32 @@
+.table-view {
+    background: var(--background-light);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: 16px;
+    width: 85%;
+}
+
+.ag-paging-panel {
+    width: max-content;
+}
+
+#myGrid {
+    border-radius: 8px;
+    height: 400px;
+    overflow: hidden;
+    width: auto;
+}
+
+.image-cell {
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    display: block;
+    height: auto;
+    width: 50px;
+}
+
+@media screen and (min-width: 768px) {
+    .ag-paging-panel {
+        width: unset;
+    }
+}
